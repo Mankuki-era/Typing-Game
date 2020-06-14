@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="background">
+    <header>
+      <div class="contena">
+        <div class="tagname">
+          <p class="subname">タイピング練習サイト</p>
+          <p class="name">Typing Master</p>
+        </div>
+        <div id="method">利用上の注意</div>
+      </div>
+    </header>
+
+    <div id="masking" class="hidden"></div>
+    <div id="attention" class="hidden">
+      <div class="attentionBox">
+        <h1>利用上の注意</h1>
+        <p>本サイトはローマ字入力のみを取り扱っています。<br>
+          コースはブラインドタッチ編・タイピング(ワード編)・タイピング(文章編)の3つを用意しています。<br>
+          一定時間が終了すると正答率が表示されますが、データとしては保存されません。<br>
+          また終了後はタイピング画面下の終了ボタンを押して閉じてください。
+        </p>
+      </div>
+    </div>
+
+    <section class="intro">
+      <h1>Typing Masterへようこそ</h1>
+        <p>本サイトはタイピング練習専用のサイトです。<br>
+           タイピング能力の向上は仕事の効率に繋がります。<br>
+           ぜひ本サイトTyping Masterを使用してタイピング能力を極めましょう。
+        </p>
+    </section>
+
+    <main>
+      <div class="container">
+        <ul class="menu">
+          <li><a href="#" class="active" data-id="about">ブラインドタッチ入門</a></li>
+          <li><a href="#" data-id="service">タイピング(ワード編)</a></li>
+          <li><a href="#" data-id="contact">タイピング(文章編)</a></li>
+        </ul>
+    
+        <section class="content active" id="about">
+          <div class="pac">
+            <p class="p1"> ブラインドタッチ初心者向けのタイピングコースです。<br>
+              アルファベットが1文字ずつ表示されます。<br>
+              なるべく手元を見ずにタイピングができるよう頑張りましょう！<br>
+            </p>
+            <p class="p2">
+              制限時間は <span>60秒</span> です。<br>
+              下のボタンを押してプレイしましょう！
+            </p>
+          </div>
+              <div class="btn" id="btn1">Play</div>
+        </section>
+    
+        <section class="content" id="service">
+          <div class="pac">
+            <p class="p1"> 中級者向けのタイピングコースです。<br>
+              短めの英単語が表示されます。<br>
+              スピードを意識して頑張ってください！<br>
+            </p>
+            <p class="p2">
+              制限時間は <span>80秒</span> です。<br>
+              下のボタンを押してプレイしましょう！
+            </p>
+          </div>
+          <div class="btn" id="btn2">Play</div>
+        </section>
+    
+        <section class="content" id="contact">
+          <div class="pac">
+            <p class="p1"> 熟練者向けのタイピングコースです。<br>
+              英語の短文が表示されます。<br>
+              可能な限り力を出し尽くしましょう！<br>
+            </p>
+            <p class="p2">
+              制限時間は <span>120秒</span> です。<br>
+              下のボタンを押してプレイしましょう！
+            </p>
+          </div>
+          <div class="btn" id="btn3">Play</div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div id="mask" class="hidden"></div>
+  <section id="modal" class="hidden">
+    <div id="boxContainer">
+      <p id="target" class="desine1 desine2 desine3">クリックして開始</p>
+      <p class="info">
+        正解タイプ数: <span id="score">0</span>,
+        ミスタイプ数: <span id="miss">0</span>,
+        残り時間: <span id="timer">0</span>秒,
+      </p>
+    </div>
+    <div id="exit" class="inactive">終了</div>
+  </section>
+  <script src="js/main.js"></script>
+</body>
+</html>
